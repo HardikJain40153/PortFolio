@@ -25,17 +25,19 @@ const About = () => {
                     readable content.
                 </p>
                 <p className="a-desc">
-                    Hello, Myself Hardik Jain. I am a final year student pursuing B.Tech in Computer Science & Engineering at
+                    Greetings, I'm Hardik Jain. I am a final-year student at
                     <a
                         style={{ color: darkMode ? "white" : "black", textDecoration: "none" }}
                         href="http://www.nits.ac.in/"
                         target="_blank"
                         rel="noreferrer">
-                        { } National Institute of Technology, Silchar. </a>
+                        { } National Institute of Technology, Silchar, { }
+                    </a>
+                    pursuing a B.Tech in Computer Science & Engineering.
                     <br />
-                    <span>With a CGPA of 8.83 in college, i also have fantastic academic records throughout school life, with proficient communication skills in both English and Hindi.</span>
+                    <span>I have excellent academic records throughout my academic career, a college GPA of 8.83, and strong communication abilities in both Hindi and English.</span>
                     <br />
-                    <span>I am skilled in Front-end Web developement with HTML, CSS and JavaScript, as well as familiar with libraries such as ReactJS and Redux. I aspire to become a full stack web developer soon.</span>
+                    <span>I have expertise in front-end web development using HTML, CSS, and JavaScript. I'm also familiar with libraries like ReactJS and Redux. Soon, I hope to achieve my goal of being a full stack web developer.</span>
                     <br /><br />
                     <span className="a-desc-resume"> Checkout my { }
                         <a

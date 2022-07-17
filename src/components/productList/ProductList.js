@@ -11,7 +11,7 @@ const ProductList = () => {
                 <p className="pl-desc">
                     <span style={{ fontWeight: "bold", fontSize: "16px" }}>"For the things we have to learn before we can do them, we learn by doing them."</span>
                     <br />
-                    <span> My Personal Projects are listed hyperlinked to their GitHub Repository.</span>
+                    <span> My personal projects are displayed with their GitHub Repository hyperlink.</span>
                 </p>
             </div>
             <div className="pl-list">
