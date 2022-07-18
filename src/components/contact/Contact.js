@@ -5,6 +5,14 @@ import Address from '../../img/address.png';
 import Email from '../../img/email.png';
 import './contact.css';
 import { ThemeContext } from '../../context';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faGithub,
+    faLinkedin,
+    faFacebook,
+    faTwitter,
+    faInstagram
+} from "@fortawesome/free-brands-svg-icons";
 
 const Contact = () => {
     const formRef = useRef();
@@ -52,15 +60,106 @@ const Contact = () => {
                         opportunities if the right project comes along me.
                     </p>
                     <form ref={formRef} onSubmit={handleSubmit}>
-                        <input style={{ backgroundColor: darkMode && "#333", color: darkMode && "white" }} type="text" placeholder="Name" name="user_name" />
-                        <input style={{ backgroundColor: darkMode && "#333", color: darkMode && "white" }} type="text" placeholder="Subject" name="user_subject" />
-                        <input style={{ backgroundColor: darkMode && "#333", color: darkMode && "white" }} type="text" placeholder="Email" name="user_email" />
-                        <textarea style={{ backgroundColor: darkMode && "#333", color: darkMode && "white" }} placeholder='Message' rows="5" name="message" ></textarea>
+                        <input
+                            required
+                            style={{
+                                backgroundColor: darkMode && "#222",
+                                color: darkMode && "white",
+                                border: darkMode && "none",
+                                borderBottom: darkMode && "1px solid white"
+                            }}
+                            type="text"
+                            placeholder="Name"
+                            name="user_name"
+                        />
+                        <input
+                            required
+                            style={{
+                                backgroundColor: darkMode && "#222",
+                                color: darkMode && "white",
+                                border: darkMode && "none",
+                                borderBottom: darkMode && "1px solid white"
+                            }}
+                            type="text"
+                            placeholder="Subject"
+                            name="user_subject"
+                        />
+                        <input
+                            required
+                            style={{
+                                backgroundColor: darkMode && "#222",
+                                color: darkMode && "white",
+                                border: darkMode && "none",
+                                borderBottom: darkMode && "1px solid white"
+                            }}
+                            type="text"
+                            placeholder="Email"
+                            name="user_email"
+                        />
+                        <textarea
+                            required
+                            style={{
+                                backgroundColor: darkMode && "#222",
+                                color: darkMode && "white"
+                            }}
+                            placeholder='Message'
+                            rows="5"
+                            name="message" >
+                        </textarea>
                         <button>Submit</button>
                         {done && <span className="c-desc-result"> Sent Successfully</span>}
                     </form>
                 </div>
             </div>
+            <div className="c-footer">
+                <div className="c-copyright">
+                    © Hardik Jain, 2022. All rights reserved.
+                </div>
+                <div className="social-container">
+
+                    <a
+                        style={{ color: darkMode ? "white" : "black" }}
+                        href="https://github.com/HardikJain40153"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="github social">
+                        <FontAwesomeIcon icon={faGithub} size="2x" />
+                    </a>
+                    <a
+                        style={{ color: darkMode ? "white" : "black" }}
+                        href="https://www.linkedin.com/in/hardik-jain-a4a6301a0/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="linkedin social">
+                        <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                    </a>
+                    <a
+                        style={{ color: darkMode ? "white" : "black" }}
+                        href="https://www.facebook.com/profile.php?id=100011720527550"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="facebook social">
+                        <FontAwesomeIcon icon={faFacebook} size="2x" />
+                    </a>
+                    <a
+                        style={{ color: darkMode ? "white" : "black" }}
+                        href="https://www.instagram.com/hardee_07/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="instagram social">
+                        <FontAwesomeIcon icon={faInstagram} size="2x" />
+                    </a>
+                    <a
+                        style={{ color: darkMode ? "white" : "black" }}
+                        href="https://twitter.com/HardikJ___07"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="twitter social">
+                        <FontAwesomeIcon icon={faTwitter} size="2x" />
+                    </a>
+                </div>
+            </div>
+
         </div>
     );
 }

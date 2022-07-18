@@ -56,6 +56,7 @@ const About = () => {
                         <h4 className="a-award-title">Coding Profiles</h4>
                         <p className="a-award-desc">
                             <a
+                                className='c-1'
                                 style={{ color: darkMode ? "white" : "black", textDecoration: "none" }}
                                 href="https://leetcode.com/hardikjain40153/"
                                 target="_blank"
@@ -64,6 +65,7 @@ const About = () => {
                                 LeetCode
                             </a>
                             <a
+                                className='c-2'
                                 style={{ color: darkMode ? "white" : "black", textDecoration: "none" }}
                                 href="https://auth.geeksforgeeks.org/user/hardikjain40153/practice/"
                                 target="_blank"
@@ -72,6 +74,7 @@ const About = () => {
                                 GeeksForGeeks
                             </a>
                             <a
+                                className='c-3'
                                 style={{ color: darkMode ? "white" : "black", textDecoration: "none" }}
                                 href="https://www.codingninjas.com/codestudio/profile/55c8c163-7430-42f6-a3e2-ca013450f423"
                                 target="_blank"
@@ -80,6 +83,7 @@ const About = () => {
                                 CodingNinjas
                             </a>
                             <a
+                                className='c-4'
                                 style={{ color: darkMode ? "white" : "black", textDecoration: "none" }}
                                 href="https://codeforces.com/profile/hardikjain40153"
                                 target="_blank"

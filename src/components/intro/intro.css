@@ -1,6 +1,7 @@
 .i{
     display: flex;
     height: 100vh;
+    position: relative;
 }
 
 .i-left{
@@ -13,6 +14,14 @@
 .i-right{
     flex: 1;
     position: relative;
+}
+
+.i-date{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-weight: 200;
+    font-size: 15px;
 }
 
 .i-left-wrapper{
@@ -40,6 +49,7 @@
 .i-title-wrapper{
     height: 100%;
     animation: move 10s ease-in-out infinite alternate;
+    margin-bottom: 10px;
 }
 
 @keyframes move {
@@ -66,6 +76,12 @@
     align-items: center;
 }
 
+.i-quote{
+    font-size: 15px;
+    font-weight: 200;
+    width: 100%;
+}
+
 .i-img{
     width: 100%;
     height: 100%;
@@ -83,9 +99,32 @@
     right: 0;
 }
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 905px){
+    .i-name{
+        font-size: 55px;
+    }
+
+    .i-intro{
+        font-size: 26px;
+    }
+
+    .i-title-item{
+        display: block;
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 727px){
     .i{
         flex-direction: column;
+    }
+
+    .i-name{
+        font-size: 40px;
+    }
+
+    .i-intro{
+        font-size: 20px;
     }
 
     .i-left-wrapper{
@@ -112,15 +151,15 @@
         object-fit: cover;
         position: absolute;
     }
-
-    .i-description{
-        margin-top: 10px;
-    }
 }
 
 @media screen and (max-width: 480px){
     .i{
         flex-direction: column;
+    }
+
+    .i-quote{
+        display: none;
     }
 
     .i-left-wrapper{
@@ -130,8 +169,10 @@
         text-align: center;
         height: 100%;
     }
-
-    .i-description{
-        display: none;
+}
+@media screen and (max-width: 324px){
+    .i-title-item{
+        /* display: block; */
+        font-size: 22px;
     }
 }

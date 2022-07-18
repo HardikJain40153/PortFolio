@@ -87,7 +87,33 @@ button{
     cursor: pointer;
 }
 
-@media screen and (max-width: 1063px){
+.social-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a.social {
+    transition: transform 250ms;
+}
+
+a.social:hover {
+    transform: translateY(-2px);
+}
+
+.c-copyright{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 70px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 833px){
     .c-wrapper{
         flex-direction: column;
         padding: 0px 70px;
@@ -126,8 +152,31 @@ button{
         margin-top: 10px;
     }
 
-    .c-desc{
+    .c-desc, .social-container{
         display: none;
+    }
+
+    .c-copyright{
+        bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 643px){
+    .c-copyright{
+        bottom: 20px;
+    }
+
+    input{
+        width: 40%;
+        height: 30px;
+        font-size: 12px;
+        padding-left: 10px;
+    }
+
+    textarea{
+        font-size: 12px;
+        padding-left: 10px;
+        height: 80px;
     }
 }
 
@@ -157,7 +206,7 @@ button{
     }
 
     input{
-        width: 35%;
+        width: 100%;
         height: 40px;
         margin: 10px;
         margin-left: 0px;
@@ -165,5 +214,16 @@ button{
 
     button{
         margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 476px){
+    .c-info-item{
+        margin: 15px 0px;
+    }
+    input{
+        height: 35px;
+        margin: 10px;
+        margin-left: 0px;
     }
 }

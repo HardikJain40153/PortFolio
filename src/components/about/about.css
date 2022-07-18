@@ -41,7 +41,6 @@
 .a-award-img{
     width: 120px;
     height: 120px;
-    border-radius: 20px;
 }
 
 .a-title{
@@ -50,10 +49,12 @@
 
 .a-sub{
     margin: 20px 0px;
+    width: 95%;
 }
 
 .a-desc{
     font-weight: 300;
+    width: 95%;
 }
 
 .a-desc-resume{
@@ -72,15 +73,24 @@
     width: 70%;
 }
 
-.a-award-desc{
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
+.c-2, .c-3, .c-4{
+    margin-left: 10px;
 }
 
 .a-award-title{
     font-weight: bold;
     margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1000px){
+    .c-3, .c-4{
+        display: none;
+    }
+
+    .a-award-img{
+        width: 95px;
+        height: 95px;
+    }
 }
 
 @media screen and (max-width: 720px){
@@ -121,5 +131,15 @@
 
     a.right{
         padding: 20px;
+    }
+
+    .a-desc{
+        display: inline-block;
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .a-sub{
+        display: none;
     }
 }
