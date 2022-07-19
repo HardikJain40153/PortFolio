@@ -72,7 +72,7 @@ const Intro = () => {
                     <p className="i-quote">
                         {`"${quote}"`}
                         <br />
-                        - {author}
+                        {author.length === 0 ? "" : "-" + author}
                     </p>
                 </div>
             </div>
