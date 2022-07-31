@@ -35,7 +35,7 @@ const About = () => {
                     </a>
                     pursuing a B.Tech in Computer Science & Engineering.
                     <br />
-                    <span>I have excellent academic records throughout my academic career, a college GPA of 8.83, and strong communication abilities in both Hindi and English.</span>
+                    <span>I have excellent academic records throughout my academic career, a college GPA of 8.77, and strong communication abilities in both Hindi and English.</span>
                     <br />
                     <span>I have expertise in front-end web development using HTML, CSS, and JavaScript. I'm also familiar with libraries like ReactJS and Redux. Soon, I hope to achieve my goal of being a full stack web developer.</span>
                     <br /><br />
