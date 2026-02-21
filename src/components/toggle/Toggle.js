@@ -7,7 +7,7 @@ import { ThemeContext } from '../../context';
 const Toggle = () => {
     const theme = useContext(ThemeContext);
 
-    const handleClick = (e) => {
+    const handleClick = () => {
         theme.dispatch({ type: "TOGGLE" });
     };
 

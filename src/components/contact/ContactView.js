@@ -2,7 +2,6 @@ import React from 'react';
 import Phone from '../../img/phone.png';
 import Address from '../../img/address.png';
 import Email from '../../img/email.png';
-import Award from '../../img/win.png';
 import './contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
