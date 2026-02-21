@@ -1,5 +1,6 @@
 .p{
-    width: 30%;
+    flex: 1 1 30%;
+    min-width: 220px;
     height: 40vh;
     margin: 20px 10px;
     border: 2px solid rgb(243, 242, 242);
@@ -26,7 +27,7 @@
 
 .p-img{
     width: 100%;
-    transition: all 10s ease;
+    transition: transform 0.6s ease;
 }
 
 .p:hover .p-img{
@@ -35,7 +36,7 @@
 
 @media screen and (max-width: 720px){
     .p{
-        width: 35%;
+        flex: 1 1 45%;
         height: 30vh;
         margin: 20px;
     }
@@ -43,7 +44,7 @@
 
 @media screen and (max-width: 480px){
     .p{
-        width: 40%;
+        flex: 1 1 80%;
         height: 20vh;
     }
 }

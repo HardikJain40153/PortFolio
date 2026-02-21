@@ -1,0 +1,107 @@
+:root{
+  --bg: #0f1113;
+  --surface-1: #18191a;
+  --surface-2: #212326;
+  --text: #e8ece8;
+  --muted: #9aa0a6;
+  --accent: #3FA043; /* Polished Green */
+  --accent-variant: #2E8F3A;
+  --focus-color: rgba(63,160,67,0.18);
+  --card-shadow: 0 14px 28px rgba(0,0,0,0.45);
+  --card-border: rgba(255,255,255,0.06);
+  --radius-lg: 30px;
+  --radius-md: 12px;
+  --radius-sm: 6px;
+  --gap: 24px;
+  --max-width: 1200px;
+  --container-padding: 40px;
+  --font-family: 'Poppins', sans-serif;
+}
+
+/* Light theme overrides */
+body[data-theme='light']{
+  --bg: #ffffff;
+  --surface-1: #ffffff;
+  --surface-2: #f7f8f9;
+  --text: #0f1724;
+  --muted: #6b7280;
+  --accent: #3FA043;
+  --accent-variant: #2E8F3A;
+  --focus-color: rgba(63,160,67,0.12);
+  --card-shadow: 0 12px 24px rgba(16,24,40,0.06);
+  --card-border: rgba(15,23,36,0.06);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-family);
+}
+
+.container{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Utility text colors */
+.muted{ color: var(--muted); }
+
+/* Focus and accessibility */
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+:focus-visible {
+  box-shadow: 0 0 0 4px var(--focus-color);
+  border-radius: 8px;
+}
+
+/* Buttons */
+.btn {
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, var(--accent), var(--accent-variant));
+  color: white;
+  box-shadow: 0 8px 20px rgba(46,143,58,0.18);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.01);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Card and image styles for consistent project thumbnails */
+.card {
+  background: linear-gradient(180deg, var(--surface-1), var(--surface-2));
+  border-radius: var(--radius-lg);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border);
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom-left-radius: var(--radius-lg);
+  border-bottom-right-radius: var(--radius-lg);
+}
+
+.muted { color: var(--muted); }

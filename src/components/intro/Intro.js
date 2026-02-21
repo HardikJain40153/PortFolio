@@ -1,35 +1,47 @@
 import React, { useEffect, useState } from 'react';
-import Me from '../../img/man.png';
-import './intro.css';
+import IntroView from './IntroView';
 
 const Intro = () => {
-
-    const monthNames = ["January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"
+    const monthNames = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
     ];
 
-    var today = new Date();
-    var date = today.getDate() + " " + (monthNames[today.getMonth()]) + ', ' + today.getFullYear();
+    const today = new Date();
+    const date = `${today.getDate()} ${monthNames[today.getMonth()]}, ${today.getFullYear()}`;
 
-    const [quote, setQuote] = useState("");
-    const [author, setAuthor] = useState("");
+    const [quote, setQuote] = useState('');
+    const [author, setAuthor] = useState('');
 
     const options = {
         method: 'GET',
         headers: {
             'X-RapidAPI-Key': 'c9709b5ac8msh153524db0b2c44ep1764e6jsnf3d7a5daa517',
-            'X-RapidAPI-Host': 'quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com'
-        }
+            'X-RapidAPI-Host': 'quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com',
+        },
     };
 
     const fetchQuote = async () => {
-        return await fetch('https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote?token=ipworld.info', options)
-            .then(response => response.json())
-            .then(data => {
+        return await fetch(
+            'https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote?token=ipworld.info',
+            options,
+        )
+            .then((response) => response.json())
+            .then((data) => {
                 updateQuote(data.text);
                 updateAuthor(data.author);
             })
-            .catch(err => console.error(err));
+            .catch((err) => console.error(err));
     };
 
     useEffect(() => {
@@ -39,49 +51,20 @@ const Intro = () => {
 
     const updateQuote = (text) => {
         setQuote(text);
-    }
+    };
 
     const updateAuthor = (auth) => {
         setAuthor(auth);
-    }
+    };
 
-    //if api req get over for the day, free plans thing
     if (quote === undefined) {
-        updateQuote("The greatest glory in living lies not in never falling, but in rising every time we fall.");
-        updateAuthor("Nelson Mandela");
+        updateQuote('The greatest glory in living lies not in never falling, but in rising every time we fall.');
+        updateAuthor('Nelson Mandela');
     }
 
-    return (
-        <div className="i">
-            <div className="i-date">
-                {date}
-            </div>
-            <div className="i-left">
-                <div className="i-left-wrapper">
-                    <h2 className="i-intro">Hello, My name is</h2>
-                    <h1 className="i-name">Hardik Jain</h1>
-                    <div className="i-title">
-                        <div className="i-title-wrapper">
-                            <div className="i-title-item">Web Developement</div>
-                            <div className="i-title-item">Problem Solving</div>
-                            <div className="i-title-item">Cricket</div>
-                            <div className="i-title-item">Photography</div>
-                            <div className="i-title-item">Travel</div>
-                        </div>
-                    </div>
-                    <p className="i-quote">
-                        {`"${quote}"`}
-                        <br />
-                        {author.length === 0 ? "" : "-" + author}
-                    </p>
-                </div>
-            </div>
-            <div className="i-right">
-                <div className="i-bg"></div>
-                <img src={Me} alt="" className="i-img" />
-            </div>
-        </div>
-    );
-}
+    const titleItems = ['Web Developement', 'Problem Solving', 'Cricket', 'Photography', 'Travel'];
+
+    return <IntroView date={date} name={'Hardik Jain'} titleItems={titleItems} quote={quote} author={author} />;
+};
 
 export default Intro;

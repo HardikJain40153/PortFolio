@@ -1,19 +1,9 @@
 import React from 'react';
-import './product.css';
+import ProductView from './ProductView';
 
-const product = ({ img, link }) => {
-    return (
-        <div className='p'>
-            <div className="p-browser">
-                <div className="p-circle"></div>
-                <div className="p-circle"></div>
-                <div className="p-circle"></div>
-            </div>
-            <a href={link} target="_blank" rel="noreferrer">
-                <img src={img} alt="" className="p-img" />
-            </a>
-        </div>
-    );
-}
+const Product = (props) => {
+  // Container left for future logic; currently passes props through
+  return <ProductView {...props} />;
+};
 
-export default product;
+export default Product;

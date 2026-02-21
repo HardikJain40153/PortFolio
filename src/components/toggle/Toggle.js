@@ -8,8 +8,8 @@ const Toggle = () => {
     const theme = useContext(ThemeContext);
 
     const handleClick = (e) => {
-        theme.dispatch({ type: "TOGGLE" })
-    }
+        theme.dispatch({ type: "TOGGLE" });
+    };
 
     return (
         <div className="t">
